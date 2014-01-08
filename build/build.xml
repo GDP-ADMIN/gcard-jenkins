@@ -251,7 +251,9 @@ from parent `lint-js` targets. -->
     </php>
     <httpget url="${jslint4java.url}"
              dir="${jslint4java.dir}"
-             proxy="${phing.httpget.proxy}" />
+             proxy="${phing.httpget.proxy}"
+             sslVerifyPeer="false"
+             followRedirects="true"/>
     <unzip file="${jslint4java.dir}/${jslint4java.zipfile}"
            todir="${jslint4java.dir}" />
 
